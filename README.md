@@ -15,4 +15,5 @@ Markus Schmidt
 
 ## Goal:
 * making an LSTM model predicting price for any stock / currency / commodity based on its closing price
-
+<br>
+<img alt="roamingthespace_gif" src="https://media1.giphy.com/media/5GoVLqeAOo6PK/200.webp?cid=ecf05e47cedqhj6xf74u70j6g5c2axy8yqndxhm3cl6u2hm8&rid=200.webp&ct=g" width="300"/>
