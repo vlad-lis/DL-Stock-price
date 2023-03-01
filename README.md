@@ -6,6 +6,9 @@
 Vladislav Lis<br>
 Markus Schmidt
 
+## Dataset:
+Any currency / stock / commodity data frame extracted via Yahoo finance API
+
 ## Plan:
 * preparation: learning about neural networks (RNN, LSTM models) (week 1)
 * test runs: using LSTM on various data sets (yahoo finance API) (week 1)
