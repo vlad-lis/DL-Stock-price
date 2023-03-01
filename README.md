@@ -3,7 +3,7 @@
 # Ironhack final project
 
 ## Team:
-Vladislav Lis
+Vladislav Lis<br>
 Markus Schmidt
 
 ## Plan:
