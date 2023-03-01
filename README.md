@@ -10,12 +10,18 @@ Markus Schmidt
 Any currency / stock / commodity data frame extracted via Yahoo finance API
 
 ## Plan:
-* preparation: learning about neural networks (RNN, LSTM models) (week 1)
-* test runs: using LSTM on various data sets (yahoo finance API) (week 1)
-* tweaking hyperparameters (week1)
-* making a final model (week 2)
-* presenation preparation (week 2)
-* optional: interface (week 2)
+* preparation: learning about neural networks (RNN, LSTM models) 
+* test runs: using LSTM on various data sets 
+* tweaking hyperparameters 
+* making a final model 
+* presenation preparation 
+* optional: interface
+
+## Roadmap:
+* 28.02 - 02.03: preparation phase (learning about RNN, LSTM; NN hyperparameters, stationarity of timeseries etc)
+* 03.03 - 06.03: test runs & evaluation
+* 07.03 - 08.03: final adjustments for chosen data sets
+* 09.03 - presenation & interface (optional)
 
 ## Goal:
 * creating an LSTM model predicting price for any stock / currency / commodity based on its closing price
