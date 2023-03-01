@@ -13,6 +13,6 @@ Markus Schmidt
 * presenation preparation (week 2)
 * optional: interface (week 2)
 
-##Goal:
+## Goal:
 * making an LSTM model predicting price for any stock / currency / commodity based on its closing price
 
