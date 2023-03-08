@@ -51,5 +51,10 @@ def input_and_predict(data):
     inside = round(inside[0][1]*100, 1)
     outside = round(outside[0][1]*100, 1)
     cyber = round(cyber[0][1]*100, 1)
+
+    output = {'overall': combined,
+             'inside': inside,
+             'outside': outside,
+             'cyber': cyber}
     
-    return [combined, inside, outside, cyber]
+    return output
