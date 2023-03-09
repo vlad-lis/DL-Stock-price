@@ -5,9 +5,9 @@ const { spawn } = require('child_process');
 
 app.use(express.json());
 
-app.get('/api', (req, res) => {
-    res.json({ message: 'placeholder test message' });
-});
+// app.get('/api', (req, res) => {
+//     res.json({ message: 'placeholder test message' });
+// });
 
 app.post('/predict', (req, res) => {
     const data = req.body;

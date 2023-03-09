@@ -16,7 +16,7 @@ function Form(props) {
 
     function handleFormSubmit(evt) {
         evt.preventDefault();
-        props.onSubmit({
+        props.onFormSubmit({
             age: age,
             sex: sex,
             attacked: attacked,
@@ -84,6 +84,7 @@ function Form(props) {
     return (
         <div>
             <form
+                className="form"
                 onSubmit={handleFormSubmit}>
                 <label>
                     <input
