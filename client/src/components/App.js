@@ -35,6 +35,7 @@ function App() {
   return (
     <div className="root">
       {/* <p>{!data ? "Loading..." : data}</p>  */}
+
       <Header />
 
       <Routes>

@@ -27,19 +27,20 @@ function About() {
             </p>
             <p className='info__text-paragraph'>
                 The initial dataset contained almost 57 thousand observations and 18 features.
-                After data cleaning (including dropping duplicates and applying downsampling)
-                and depending on the approach used (various target variables as output)
-                data used to train the model varied from 12 to 30 thousand observations and had 12 features.
+                After data cleaning (including dropping duplicates and applying downsampling),
+                and depending on the approach used (with various target variables as output),
+                the data used to train the model varied from 12 to 30 thousand observations and had 12 features.
             </p>
             <p className='info__text-paragraph'>
-                The output contains four values:<br/>
-                &emsp;&emsp;&emsp;1. "Overall probability" - three possible target variables combined into one.<br/>
-                &emsp;&emsp;&emsp;2. "Inside school" - probablity of target variable corresponding 
-                to the risk being bullied inside school.<br/>
-                &emsp;&emsp;&emsp;3. "Outside school" - probablity of target variable corresponding 
-                to the risk being bullied outside school.<br/>
-                &emsp;&emsp;&emsp;4. "Cyberbullied" - probablity of target variable corresponding 
-                to the risk being cyberbullied.
+                The output contains four values:<br />
+                &emsp;&emsp;&emsp;1. "Overall probability" - which combines the probabilities of
+                three possible target variables into one.<br />
+                &emsp;&emsp;&emsp;2. "Inside school" - the probability of the target variable
+                corresponding to the risk of being bullied inside school.<br />
+                &emsp;&emsp;&emsp;3. "Outside school" - the probability of the target variable
+                corresponding to the risk of being bullied outside school.<br />
+                &emsp;&emsp;&emsp;4. "Cyberbullying" - the probability of the target variable
+                corresponding to the risk of being cyberbullied.
             </p>
         </div>
     )
