@@ -25,3 +25,4 @@
 @import url(./blocks/info/__text-paragraph/info__text-paragraph.css);
 @import url(./blocks/info/__text-span/info__text-span.css);
 @import url(./blocks/info/__link/info__link.css);
+@import url(./blocks/info/__text-span/_local/info__text-span_local.css);

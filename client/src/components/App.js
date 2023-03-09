@@ -59,10 +59,6 @@ function App() {
           } />
       </Routes>
 
-      {/* <Evaluate
-        isOpen={isPredictionsOpen}
-        predictions={predictions} /> */}
-
       <Footer />
 
     </div>

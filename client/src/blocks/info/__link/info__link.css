@@ -1,3 +1,10 @@
 .info__link {
     text-decoration: none;
+    transition: all .5s;
+}
+
+.info__link:hover {
+    cursor: pointer;
+    opacity: .5;
+    transition: all .5s;
 }

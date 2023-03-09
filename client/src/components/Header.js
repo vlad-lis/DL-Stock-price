@@ -21,6 +21,7 @@ function Header() {
                         element={
                             <>
                                 <Link to='/' className='header__nav-link'>Home</Link>
+                                <Link to='/evaluate' className='header__nav-link'>Evaluate</Link>
                                 <Link to='/about' className='header__nav-link'>About</Link>
                             </>
                         }
@@ -31,6 +32,7 @@ function Header() {
                             <>
                                 <Link to='/' className='header__nav-link'>Home</Link>
                                 <Link to='/evaluate' className='header__nav-link'>Evaluate</Link>
+                                <Link to='/about' className='header__nav-link'>About</Link>
                             </>
                         }
                     />
