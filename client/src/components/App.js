@@ -1,17 +1,15 @@
 import { useState, useEffect } from 'react';
-import Form from './Form';
 import Header from './Header';
 import Main from './Main';
+import Home from './Home';
+import Footer from './Footer';
 import { Route, Routes } from 'react-router-dom';
 import api from '../utils/Api';
+import About from './About';
 
 function App() {
   //const [data, setData] = useState(null);
   const [predictions, setPredictions] = useState('');
-  // const [predictionCombined, setPredictionCombined] = useState(null)
-  // const [predictionInside, setPredictionInside] = useState(null)
-  // const [predictionOutside, setPredictionOutside] = useState(null)
-  // const [predictionCyber, setPredictionCyber] = useState(null)
 
   // useEffect(() => {
   //   fetch('/api')
@@ -25,10 +23,6 @@ function App() {
       .getPrediction(data)
       .then((predictions) => {
         setPredictions(predictions);
-        // setPredictionCombined(predictions.combined);
-        // setPredictionInside(predictions.inside);
-        // setPredictionOutside(predictions.outside);
-        // setPredictionCyber(predictions.cyber);
       })
   };
 
@@ -36,15 +30,29 @@ function App() {
     <div className="root">
       {/* <p>{!data ? "Loading..." : data}</p>  */}
       <Header />
+
       <Routes>
-        <Route
+      <Route
           path='/'
+          element={
+            <Home />
+          } />
+        <Route
+          path='/evaluate'
           element={
             <Main
               onFormSubmit={handlePrediction}
               predictions={predictions} />
           } />
+        <Route
+          path='/about'
+          element={
+            <About />
+          } />
       </Routes>
+
+      <Footer />
+
     </div>
   );
 }
