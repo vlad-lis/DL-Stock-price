@@ -19,7 +19,6 @@ function App() {
   // });
 
   function handlePrediction(data) {
-    console.log(data);
     api
       .getPrediction(data)
       .then((predictions) => {

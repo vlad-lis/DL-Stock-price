@@ -2,7 +2,9 @@
 @import url(./blocks/form/form.css);
 @import url(./blocks/form/__input/form__input.css);
 @import url(./blocks/form/__label/form__label.css);
+@import url(./blocks/form/__controls/form__controls.css);
 @import url(./blocks/form/__button/form__button.css);
+@import url(./blocks/form/__button/_reset/form__button_reset.css);
 @import url(./blocks/form/__input-title/form__input-title.css);
 @import url(./blocks/form/__input-span/form__input-span.css);
 @import url(./blocks/header/header.css);

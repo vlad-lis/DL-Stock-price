@@ -14,6 +14,22 @@ function Form(props) {
     const [overweight, setOverweight] = useState(null);
     const [obese, setObese] = useState(null);
 
+    function handleReset(evt) {
+        evt.preventDefault();
+        setAge(null);
+        setSex(null);
+        setAttacked(null);
+        setFighting(null);
+        setLonely(null);
+        setFriends(null);
+        setAbsence(null);
+        setStudentCompassion(null);
+        setParentCompassion(null);
+        setUnderweight(null);
+        setOverweight(null);
+        setObese(null);
+    };
+
     function handleFormSubmit(evt) {
         evt.preventDefault();
         props.onFormSubmit({
@@ -88,185 +104,225 @@ function Form(props) {
                 onSubmit={handleFormSubmit}>
                 <label className='form__label'>
                     <p className='form__input-title'>
-                        Age <span className='form__input-span'>(11-18)</span>:
+                        Age:
                     </p>
-                    <input
+                    <select
                         className='form__input'
                         name='age'
-                        type='number'
-                        min='11'
-                        max='18'
                         onChange={handleAgeChange}
-                        placeholder='11-18'
-                        value={age || ''}>
-                    </input>
+                        value={age || ''}
+                        required>
+                        <option value='' disabled>Choose an option</option>
+                        <option>11 years old or younger</option>
+                        <option>12 years old</option>
+                        <option>13 years old</option>
+                        <option>14 years old</option>
+                        <option>15 years old</option>
+                        <option>16 years old</option>
+                        <option>17 years old</option>
+                        <option>18 years old or older</option>
+                    </select>
                 </label>
                 <label className='form__label'>
                     <p className='form__input-title'>
-                        Sex <span className='form__input-span'>(0-Male, 1-Female)</span>:
+                        Gender:
                     </p>
-                    <input
+                    <select
                         className='form__input'
                         name='sex'
-                        type='number'
-                        min='0'
-                        max='1'
                         onChange={handleSexChange}
-                        placeholder='0/1'
-                        value={sex || ''}>
-                    </input>
+                        value={sex || ''}
+                        required>
+                        <option value='' disabled>Choose an option</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
                 </label>
                 <label className='form__label'>
                     <p className='form__input-title'>
-                        Was physically attacked <span className='form__input-span'>(frequency, scale 0-7)</span>:
+                        How frequently does the person experience physical attacks?
                     </p>
-                    <input
+                    <select
                         className='form__input'
                         name='attacked'
-                        type='number'
-                        min='0'
-                        max='7'
                         onChange={handleAttackedChange}
-                        placeholder='0-7'
-                        value={attacked || ''}>
-                    </input>
+                        value={attacked || ''}
+                        required>
+                        <option value='' disabled>Choose an option</option>
+                        <option>0 times</option>
+                        <option>1 time</option>
+                        <option>2 or 3 times</option>
+                        <option>4 or 5 times</option>
+                        <option>6 or 7 times</option>
+                        <option>8 or 9 times</option>
+                        <option>10 or 11 times</option>
+                        <option>12 or more times</option>
+                    </select>
                 </label>
                 <label className='form__label'>
                     <p className='form__input-title'>
-                        Started fights <span className='form__input-span'>(frequency, scale 0-7)</span>:
+                        How frequently does the person initiate physical altercations?
                     </p>
-                    <input
+                    <select
                         className='form__input'
                         name='fighting'
-                        type='number'
-                        min='0'
-                        max='7'
                         onChange={handleFightingChange}
-                        placeholder='0-7'
-                        value={fighting || ''}>
-                    </input>
+                        value={fighting || ''}
+                        required>
+                        <option value='' disabled>Choose an option</option>
+                        <option>0 times</option>
+                        <option>1 time</option>
+                        <option>2 or 3 times</option>
+                        <option>4 or 5 times</option>
+                        <option>6 or 7 times</option>
+                        <option>8 or 9 times</option>
+                        <option>10 or 11 times</option>
+                        <option>12 or more times</option>
+                    </select>
                 </label>
                 <label className='form__label'>
                     <p className='form__input-title'>
-                        Felt lonely <span className='form__input-span'>(scale 0-4, where 0-never)</span>:
+                        How often does the person feel lonely?
                     </p>
-                    <input
+                    <select
                         className='form__input'
                         name='lonely'
-                        type='number'
-                        min='0'
-                        max='4'
                         onChange={handleLonelyChange}
-                        placeholder='0-4'
-                        value={lonely || ''}>
-                    </input>
+                        value={lonely || ''}
+                        required>
+                        <option value='' disabled>Choose an option</option>
+                        <option>Never</option>
+                        <option>Rarely</option>
+                        <option>Sometimes</option>
+                        <option>Most of the time</option>
+                        <option>Always</option>
+                    </select>
                 </label>
                 <label className='form__label'>
                     <p className='form__input-title'>
-                        Friends <span className='form__input-span'>(number 0-3, for 3+ use 3)</span>:
+                        How many close friends does the person have?
                     </p>
-                    <input
+                    <select
                         className='form__input'
                         name='friends'
-                        type='number'
-                        min='0'
-                        max='3'
                         onChange={handleFriendsChange}
-                        placeholder='0-3'
-                        value={friends || ''}>
-                    </input>
+                        value={friends || ''}
+                        required>
+                        <option value='' disabled>Choose an option</option>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3 or more</option>
+                    </select>
                 </label>
                 <label className='form__label'>
                     <p className='form__input-title'>
-                        Skipped classes without permission <span className='form__input-span'>(frequency, scale 0-4)</span>:
+                        How often does the person skip classes without permission?
                     </p>
-                    <input
+                    <select
                         className='form__input'
                         name='absence'
-                        type='number'
-                        min='0'
-                        max='4'
                         onChange={handleAbsenceChange}
-                        placeholder='0-4'
-                        value={absence || ''}>
-                    </input>
+                        value={absence || ''}
+                        required>
+                        <option value='' disabled>Choose an option</option>
+                        <option>0 days</option>
+                        <option>1 or 2 days</option>
+                        <option>3 to 5 days</option>
+                        <option>6 to 9 days</option>
+                        <option>10 or more days</option>
+                    </select>
                 </label>
                 <label className='form__label'>
                     <p className='form__input-title'>
-                        Finds peers supportive <span className='form__input-span'>(scale 0-4)</span>:
+                        Does the person feel that their peers are friendly and supportive?
                     </p>
-                    <input
+                    <select
                         className='form__input'
                         name='studentCompassion'
-                        type='number'
-                        min='0'
-                        max='4'
                         onChange={handleStudentCompassionChange}
-                        placeholder='0-4'
-                        value={studentCompassion || ''}>
-                    </input>
+                        value={studentCompassion || ''}
+                        required>
+                        <option value='' disabled>Choose an option</option>
+                        <option>Never</option>
+                        <option>Rarely</option>
+                        <option>Sometimes</option>
+                        <option>Most of the time</option>
+                        <option>Always</option>
+                    </select>
                 </label>
                 <label className='form__label'>
                     <p className='form__input-title'>
-                        Finds parents supportive <span className='form__input-span'>(scale 0-4)</span>:
+                        Does the person feel that their parents are friendly and supportive?
                     </p>
-                    <input
+                    <select
                         className='form__input'
                         name='parentCompassion'
-                        type='number'
-                        min='0'
-                        max='4'
                         onChange={handleParentCompassionChange}
-                        placeholder='0-4'
-                        value={parentCompassion || ''}>
-                    </input>
+                        value={parentCompassion || ''}
+                        required>
+                        <option value='' disabled>Choose an option</option>
+                        <option>Never</option>
+                        <option>Rarely</option>
+                        <option>Sometimes</option>
+                        <option>Most of the time</option>
+                        <option>Always</option>
+                    </select>
                 </label>
                 <label className='form__label'>
                     <p className='form__input-title'>
-                        Was underweight <span className='form__input-span'>(0-no, 1-yes)</span>:
+                        Does the person consider themselves to be underweight?
                     </p>
-                    <input
+                    <select
                         className='form__input'
                         name='underweight'
-                        type='number'
-                        min='0'
-                        max='1'
                         onChange={handleUnderweightChange}
-                        placeholder='0/1'
-                        value={underweight || ''}>
-                    </input>
+                        value={underweight || ''}
+                        required>
+                        <option value='' disabled>Choose an option</option>
+                        <option>No</option>
+                        <option>Yes</option>
+                    </select>
                 </label>
                 <label className='form__label'>
                     <p className='form__input-title'>
-                        Was overweight <span className='form__input-span'>(0-no, 1-yes)</span>:
+                        Does the person consider themselves to be overweight?
                     </p>
-                    <input
+                    <select
                         className='form__input'
                         name='overweight'
-                        type='number'
-                        min='0'
-                        max='1'
                         onChange={handleOverweightChange}
-                        placeholder='0/1'
-                        value={overweight || ''}>
-                    </input>
+                        value={overweight || ''}
+                        required>
+                        <option value='' disabled>Choose an option</option>
+                        <option>No</option>
+                        <option>Yes</option>
+                    </select>
                 </label>
                 <label className='form__label'>
                     <p className='form__input-title'>
-                        Suffered from obesity <span className='form__input-span'>(0-no, 1-yes)</span>:
+                        Has the person ever been diagnosed with obesity?
                     </p>
-                    <input
+                    <select
                         className='form__input'
                         name='obese'
-                        type='number'
-                        min='0'
-                        max='1'
                         onChange={handleObesityChange}
-                        placeholder='0/1'
-                        value={obese || ''}>
-                    </input>
+                        value={obese || ''}
+                        required>
+                        <option value='' disabled>Choose an option</option>
+                        <option>No</option>
+                        <option>Yes</option>
+                    </select>
                 </label>
-                <button className='form__button' type='submit'>Evaluate</button>
+                <div className='form__controls'>
+                    <button
+                        className='form__button form__button_reset'
+                        type='reset'
+                        onClick={handleReset}>Reset</button>
+                    <button
+                        className='form__button'
+                        type='submit'>Evaluate</button>
+                </div>
             </form>
         </div>
     )

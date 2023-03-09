@@ -1,0 +1,10 @@
+.form__button_reset {
+    width: 15%;
+    margin-right: 20px;
+}
+
+.form__button_reset:hover::before,
+.form__button_reset:hover::after {
+    width: 94%;
+    height: 83%;
+}
