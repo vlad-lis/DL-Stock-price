@@ -15,3 +15,4 @@
 @import url(./blocks/home/home.css);
 @import url(./blocks/about/about.css);
 @import url(./blocks/predictions/predictions.css);
+@import url(./blocks/predictions/_open/predictions_open.css);

@@ -10,6 +10,7 @@ import About from './About';
 function App() {
   //const [data, setData] = useState(null);
   const [predictions, setPredictions] = useState('');
+  const [isPredictionsPopupOpen, setPredictionsPopupOpen] = useState(false);
 
   // useEffect(() => {
   //   fetch('/api')
@@ -23,6 +24,7 @@ function App() {
       .getPrediction(data)
       .then((predictions) => {
         setPredictions(predictions);
+        setPredictionsPopupOpen(true);
       })
   };
 
@@ -32,7 +34,7 @@ function App() {
       <Header />
 
       <Routes>
-      <Route
+        <Route
           path='/'
           element={
             <Home />
@@ -42,6 +44,7 @@ function App() {
           element={
             <Evaluate
               onFormSubmit={handlePrediction}
+              isPredictionsPopupOpen={isPredictionsPopupOpen}
               predictions={predictions} />
           } />
         <Route
@@ -50,6 +53,10 @@ function App() {
             <About />
           } />
       </Routes>
+
+      {/* <Evaluate
+        isOpen={isPredictionsOpen}
+        predictions={predictions} /> */}
 
       <Footer />
 

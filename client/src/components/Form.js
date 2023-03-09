@@ -94,6 +94,8 @@ function Form(props) {
                         className='form__input'
                         name='age'
                         type='number'
+                        min='11'
+                        max='18'
                         onChange={handleAgeChange}
                         placeholder='11-18'
                         value={age || ''}>
@@ -107,6 +109,8 @@ function Form(props) {
                         className='form__input'
                         name='sex'
                         type='number'
+                        min='0'
+                        max='1'
                         onChange={handleSexChange}
                         placeholder='0/1'
                         value={sex || ''}>
@@ -120,6 +124,8 @@ function Form(props) {
                         className='form__input'
                         name='attacked'
                         type='number'
+                        min='0'
+                        max='7'
                         onChange={handleAttackedChange}
                         placeholder='0-7'
                         value={attacked || ''}>
@@ -133,6 +139,8 @@ function Form(props) {
                         className='form__input'
                         name='fighting'
                         type='number'
+                        min='0'
+                        max='7'
                         onChange={handleFightingChange}
                         placeholder='0-7'
                         value={fighting || ''}>
@@ -146,6 +154,8 @@ function Form(props) {
                         className='form__input'
                         name='lonely'
                         type='number'
+                        min='0'
+                        max='4'
                         onChange={handleLonelyChange}
                         placeholder='0-4'
                         value={lonely || ''}>
@@ -159,6 +169,8 @@ function Form(props) {
                         className='form__input'
                         name='friends'
                         type='number'
+                        min='0'
+                        max='3'
                         onChange={handleFriendsChange}
                         placeholder='0-3'
                         value={friends || ''}>
@@ -172,6 +184,8 @@ function Form(props) {
                         className='form__input'
                         name='absence'
                         type='number'
+                        min='0'
+                        max='4'
                         onChange={handleAbsenceChange}
                         placeholder='0-4'
                         value={absence || ''}>
@@ -185,6 +199,8 @@ function Form(props) {
                         className='form__input'
                         name='studentCompassion'
                         type='number'
+                        min='0'
+                        max='4'
                         onChange={handleStudentCompassionChange}
                         placeholder='0-4'
                         value={studentCompassion || ''}>
@@ -198,6 +214,8 @@ function Form(props) {
                         className='form__input'
                         name='parentCompassion'
                         type='number'
+                        min='0'
+                        max='4'
                         onChange={handleParentCompassionChange}
                         placeholder='0-4'
                         value={parentCompassion || ''}>
@@ -211,6 +229,8 @@ function Form(props) {
                         className='form__input'
                         name='underweight'
                         type='number'
+                        min='0'
+                        max='1'
                         onChange={handleUnderweightChange}
                         placeholder='0/1'
                         value={underweight || ''}>
@@ -224,6 +244,8 @@ function Form(props) {
                         className='form__input'
                         name='overweight'
                         type='number'
+                        min='0'
+                        max='1'
                         onChange={handleOverweightChange}
                         placeholder='0/1'
                         value={overweight || ''}>
@@ -237,6 +259,8 @@ function Form(props) {
                         className='form__input'
                         name='obese'
                         type='number'
+                        min='0'
+                        max='1'
                         onChange={handleObesityChange}
                         placeholder='0/1'
                         value={obese || ''}>

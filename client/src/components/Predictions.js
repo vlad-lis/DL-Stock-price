@@ -1,16 +1,23 @@
-function Predictions({ predictions }) {
+function Predictions({ isOpen, predictions }) {
     return (
-        <div className='predictions'>
-            <p>combined:</p>
-            <p>{predictions.combined}</p>
-            <p>inside:</p>
-            <p>{predictions.inside}</p>
-            <p>outside:</p>
-            <p>{predictions.outside}</p>
-            <p>cyber:</p>
-            <p>{predictions.cyber}</p>
+        <div className={`predictions ${isOpen && 'predictions_open'}`}>
+            <div>
+                <p>combined:</p>
+                <p>{predictions.combined}</p>
+            </div>
+            <div>
+                <p>inside:</p>
+                <p>{predictions.inside}</p>
+            </div>
+            <div>
+                <p>outside:</p>
+                <p>{predictions.outside}</p>
+            </div>
+            <div>
+                <p>cyber:</p>
+                <p>{predictions.cyber}</p>
+            </div>
         </div>
-
     )
 }
 
