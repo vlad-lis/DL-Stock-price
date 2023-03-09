@@ -1,0 +1,17 @@
+.predictions__close-btn {
+    background-color: aliceblue;
+    border: 1px solid aliceblue;
+    border-radius: 7px;
+    font-style: italic;
+    font-size: 15px;
+    position: absolute;
+    top: 235px;
+    right: 10px;
+    transition: all .5s;
+}
+
+.predictions__close-btn:hover {
+    cursor: pointer;
+    background-color: grey;
+    transition: all 1s;
+}

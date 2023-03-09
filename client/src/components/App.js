@@ -28,6 +28,10 @@ function App() {
       })
   };
 
+  function handleClosePredictions() {
+    setPredictionsPopupOpen(false);
+  }
+
   return (
     <div className="root">
       {/* <p>{!data ? "Loading..." : data}</p>  */}
@@ -45,6 +49,7 @@ function App() {
             <Evaluate
               onFormSubmit={handlePrediction}
               isPredictionsPopupOpen={isPredictionsPopupOpen}
+              closePredictions={handleClosePredictions}
               predictions={predictions} />
           } />
         <Route

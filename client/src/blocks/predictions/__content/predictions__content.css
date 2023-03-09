@@ -9,4 +9,5 @@
     max-width: 850px;
     max-height: 300px;
     border-radius: 10px;
+    position: relative;
 }

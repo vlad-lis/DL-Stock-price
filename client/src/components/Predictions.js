@@ -1,4 +1,4 @@
-function Predictions({ isOpen, predictions }) {
+function Predictions({ isOpen, predictions, onClose }) {
     return (
         <div className={`predictions ${isOpen && 'predictions_open'}`}>
             <div className='predictions__content'>
@@ -20,6 +20,7 @@ function Predictions({ isOpen, predictions }) {
                         <p className='predictions__probability'>{`${predictions.cyber}%`}</p>
                     </div>
                 </div>
+                <button className='predictions__close-btn' onClick={onClose}>Close</button>
             </div>
         </div>
     )

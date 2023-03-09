@@ -9,7 +9,7 @@
 @import url(./blocks/header/__nav-link/header__nav-link.css);
 @import url(./blocks/header/__nav-container/header__nav-container.css);
 @import url(./blocks/header/__title/header__title.css);
-@import url(./blocks/main/main.css);
+@import url(./blocks/evaluate/evaluate.css);
 @import url(./blocks/footer/footer.css);
 @import url(./blocks/footer/__text/footer__text.css);
 @import url(./blocks/home/home.css);
@@ -21,3 +21,7 @@
 @import url(./blocks/predictions/__separate-models/predictions__separate-models.css);
 @import url(./blocks/predictions/__model-name/predictions__model-name.css);
 @import url(./blocks/predictions/__probability/predictions__probability.css);
+@import url(./blocks/predictions/__close-btn/predictions__close-btn.css);
+@import url(./blocks/info/__text-paragraph/info__text-paragraph.css);
+@import url(./blocks/info/__text-span/info__text-span.css);
+@import url(./blocks/info/__link/info__link.css);
