@@ -1,5 +1,3 @@
 .ipynb_checkpoints
 .DS_Store
 models/saved_models/model_combined.joblib
-models/saved_models/model_cyber.joblib
-
