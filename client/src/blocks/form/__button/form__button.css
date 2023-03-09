@@ -1,0 +1,49 @@
+.form__button {
+    align-self: center;
+    width: 75%;
+    min-height: 35px;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    position: relative;
+    padding: 0;
+    border: 10px;
+    border-radius: 4px;
+}
+
+.form__button:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.form__button::before,
+.form__button::after {
+    content: "";
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    transition: all 1s;
+}
+
+.form__button::before {
+    top: 0;
+    left: 0;
+    border-top: 6px solid  rgb(138, 141, 141);
+    border-left: 6px solid  rgb(138, 141, 141);
+    border-radius: 4px;
+}
+
+.form__button::after {
+    bottom: 0;
+    right: 0;
+    border-bottom: 6px solid  rgb(138, 141, 141);
+    border-right: 6px solid  rgb(138, 141, 141);
+    border-radius: 4px;
+}
+
+.form__button:hover::before,
+.form__button:hover::after {
+    width: 98%;
+    height: 83%;
+    transition: all 1s;
+}

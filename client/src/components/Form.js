@@ -86,115 +86,163 @@ function Form(props) {
             <form
                 className="form"
                 onSubmit={handleFormSubmit}>
-                <label>
+                <label className='form__label'>
+                    <p className='form__input-title'>
+                        Age <span className='form__input-span'>(11-18)</span>:
+                    </p>
                     <input
+                        className='form__input'
                         name='age'
                         type='number'
                         onChange={handleAgeChange}
-                        placeholder='Age'
+                        placeholder='11-18'
                         value={age || ''}>
                     </input>
                 </label>
-                <label>
+                <label className='form__label'>
+                    <p className='form__input-title'>
+                        Sex <span className='form__input-span'>(0-Male, 1-Female)</span>:
+                    </p>
                     <input
+                        className='form__input'
                         name='sex'
                         type='number'
                         onChange={handleSexChange}
-                        placeholder='Sex'
+                        placeholder='0/1'
                         value={sex || ''}>
                     </input>
                 </label>
-                <label>
+                <label className='form__label'>
+                    <p className='form__input-title'>
+                        Was physically attacked <span className='form__input-span'>(frequency, scale 0-7)</span>:
+                    </p>
                     <input
+                        className='form__input'
                         name='attacked'
                         type='number'
                         onChange={handleAttackedChange}
-                        placeholder='Was attacked'
+                        placeholder='0-7'
                         value={attacked || ''}>
                     </input>
                 </label>
-                <label>
+                <label className='form__label'>
+                    <p className='form__input-title'>
+                        Started fights <span className='form__input-span'>(frequency, scale 0-7)</span>:
+                    </p>
                     <input
+                        className='form__input'
                         name='fighting'
                         type='number'
                         onChange={handleFightingChange}
-                        placeholder='Initiated fights'
+                        placeholder='0-7'
                         value={fighting || ''}>
                     </input>
                 </label>
-                <label>
+                <label className='form__label'>
+                    <p className='form__input-title'>
+                        Felt lonely <span className='form__input-span'>(scale 0-4, where 0-never)</span>:
+                    </p>
                     <input
+                        className='form__input'
                         name='lonely'
                         type='number'
                         onChange={handleLonelyChange}
-                        placeholder='Felt lonely'
+                        placeholder='0-4'
                         value={lonely || ''}>
                     </input>
                 </label>
-                <label>
+                <label className='form__label'>
+                    <p className='form__input-title'>
+                        Friends <span className='form__input-span'>(number 0-3, for 3+ use 3)</span>:
+                    </p>
                     <input
+                        className='form__input'
                         name='friends'
                         type='number'
                         onChange={handleFriendsChange}
-                        placeholder='Number of friends'
+                        placeholder='0-3'
                         value={friends || ''}>
                     </input>
                 </label>
-                <label>
+                <label className='form__label'>
+                    <p className='form__input-title'>
+                        Skipped classes without permission <span className='form__input-span'>(frequency, scale 0-4)</span>:
+                    </p>
                     <input
+                        className='form__input'
                         name='absence'
                         type='number'
                         onChange={handleAbsenceChange}
-                        placeholder='Skipped classes without permission'
+                        placeholder='0-4'
                         value={absence || ''}>
                     </input>
                 </label>
-                <label>
+                <label className='form__label'>
+                    <p className='form__input-title'>
+                        Finds peers supportive <span className='form__input-span'>(scale 0-4)</span>:
+                    </p>
                     <input
+                        className='form__input'
                         name='studentCompassion'
                         type='number'
                         onChange={handleStudentCompassionChange}
-                        placeholder='Found peers supportive'
+                        placeholder='0-4'
                         value={studentCompassion || ''}>
                     </input>
                 </label>
-                <label>
+                <label className='form__label'>
+                    <p className='form__input-title'>
+                        Finds parents supportive <span className='form__input-span'>(scale 0-4)</span>:
+                    </p>
                     <input
+                        className='form__input'
                         name='parentCompassion'
                         type='number'
                         onChange={handleParentCompassionChange}
-                        placeholder='Found parents supportive'
+                        placeholder='0-4'
                         value={parentCompassion || ''}>
                     </input>
                 </label>
-                <label>
+                <label className='form__label'>
+                    <p className='form__input-title'>
+                        Was underweight <span className='form__input-span'>(0-no, 1-yes)</span>:
+                    </p>
                     <input
+                        className='form__input'
                         name='underweight'
                         type='number'
                         onChange={handleUnderweightChange}
-                        placeholder='Was underweight'
+                        placeholder='0/1'
                         value={underweight || ''}>
                     </input>
                 </label>
-                <label>
+                <label className='form__label'>
+                    <p className='form__input-title'>
+                        Was overweight <span className='form__input-span'>(0-no, 1-yes)</span>:
+                    </p>
                     <input
+                        className='form__input'
                         name='overweight'
                         type='number'
                         onChange={handleOverweightChange}
-                        placeholder='Was overweight'
+                        placeholder='0/1'
                         value={overweight || ''}>
                     </input>
                 </label>
-                <label>
+                <label className='form__label'>
+                    <p className='form__input-title'>
+                        Suffered from obesity <span className='form__input-span'>(0-no, 1-yes)</span>:
+                    </p>
                     <input
+                        className='form__input'
                         name='obese'
                         type='number'
                         onChange={handleObesityChange}
-                        placeholder='Suffered from obesity'
+                        placeholder='0/1'
                         value={obese || ''}>
                     </input>
                 </label>
-                <button type='submit'>Go</button>
+                <button className='form__button' type='submit'>Evaluate</button>
             </form>
         </div>
     )

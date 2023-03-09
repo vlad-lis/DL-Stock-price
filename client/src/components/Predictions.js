@@ -1,10 +1,6 @@
-import Form from "./Form";
-
-function Main({ onFormSubmit, predictions }) {
+function Predictions({ predictions }) {
     return (
-        <div className='main'>
-            <Form
-                onFormSubmit={onFormSubmit} />
+        <div className='predictions'>
             <p>combined:</p>
             <p>{predictions.combined}</p>
             <p>inside:</p>
@@ -18,4 +14,4 @@ function Main({ onFormSubmit, predictions }) {
     )
 }
 
-export default Main;
+export default Predictions;

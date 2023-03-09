@@ -37,7 +37,7 @@ function Header() {
                 </Routes>
             </div>
 
-            <h1 className='header__title'>Evaluating vulnerabiluty to bullying </h1>
+            <h1 className='header__title'>Evaluation of vulnerabiluty to bullying </h1>
 
         </header>
     )

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Header from './Header';
-import Main from './Main';
+import Evaluate from './Evaluate';
 import Home from './Home';
 import Footer from './Footer';
 import { Route, Routes } from 'react-router-dom';
@@ -40,7 +40,7 @@ function App() {
         <Route
           path='/evaluate'
           element={
-            <Main
+            <Evaluate
               onFormSubmit={handlePrediction}
               predictions={predictions} />
           } />
