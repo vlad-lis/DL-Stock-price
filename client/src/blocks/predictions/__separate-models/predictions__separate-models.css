@@ -1,0 +1,4 @@
+.predictions__separate-models {
+    display: flex;
+    gap: 15px;
+}

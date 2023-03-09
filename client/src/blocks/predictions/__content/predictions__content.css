@@ -1,0 +1,12 @@
+.predictions__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    color: black;
+    background-color: aliceblue;
+    padding: 50px 25px 50px 25px;
+    max-width: 850px;
+    max-height: 300px;
+    border-radius: 10px;
+}

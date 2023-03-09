@@ -16,3 +16,8 @@
 @import url(./blocks/about/about.css);
 @import url(./blocks/predictions/predictions.css);
 @import url(./blocks/predictions/_open/predictions_open.css);
+@import url(./blocks/predictions/__content/predictions__content.css);
+@import url(./blocks/predictions/__prediction/predictions__prediction.css);
+@import url(./blocks/predictions/__separate-models/predictions__separate-models.css);
+@import url(./blocks/predictions/__model-name/predictions__model-name.css);
+@import url(./blocks/predictions/__probability/predictions__probability.css);

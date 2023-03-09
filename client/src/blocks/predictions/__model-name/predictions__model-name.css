@@ -1,0 +1,11 @@
+.predictions__model-name {
+    margin: 0;
+    font-size: 14px;
+    text-align: center;
+    max-width: 100px;
+    display: inline-block;
+}
+
+.predictions__model-name#name-combined {
+    font-size: 18px;
+}
