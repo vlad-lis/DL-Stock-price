@@ -1,6 +1,6 @@
 const { useState } = require("react")
 
-function Form(props) {
+function Form({ onFormSubmit, isLoading }) {
     const [age, setAge] = useState(null);
     const [sex, setSex] = useState(null);
     const [attacked, setAttacked] = useState(null);
@@ -32,7 +32,7 @@ function Form(props) {
 
     function handleFormSubmit(evt) {
         evt.preventDefault();
-        props.onFormSubmit({
+        onFormSubmit({
             age: age,
             sex: sex,
             attacked: attacked,
@@ -316,12 +316,14 @@ function Form(props) {
                 </label>
                 <div className='form__controls'>
                     <button
-                        className='form__button form__button_reset'
+                        className={`form__button form__button_reset ${isLoading && 'form__button_disabled'}`}
                         type='reset'
-                        onClick={handleReset}>Reset</button>
+                        onClick={handleReset}
+                        disabled={isLoading}>Reset</button>
                     <button
-                        className='form__button'
-                        type='submit'>Evaluate</button>
+                        className={`form__button ${isLoading && 'form__button_disabled'}`}
+                        type='submit'
+                        disabled={isLoading}>{isLoading ? 'Skynet loading...' : 'Evaluate'}</button>
                 </div>
             </form>
         </div>

@@ -3,9 +3,10 @@
     border: 1px solid aliceblue;
     border-radius: 7px;
     font-style: italic;
+    font-weight: bold;
     font-size: 15px;
     position: absolute;
-    top: 235px;
+    top: 10px;
     right: 10px;
     transition: all .5s;
 }

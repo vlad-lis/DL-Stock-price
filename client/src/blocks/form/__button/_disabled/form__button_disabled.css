@@ -1,0 +1,13 @@
+.form__button_disabled:disabled {
+    background-color: aliceblue;
+    opacity: .9;
+    transition: all .5s;
+}
+
+.form__button_disabled::before {
+    border: none;
+}
+
+.form__button_disabled::after {
+    border: none;
+}

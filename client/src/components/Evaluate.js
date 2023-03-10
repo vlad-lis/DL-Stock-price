@@ -1,11 +1,12 @@
 import Form from "./Form";
 import Predictions from "./Predictions";
 
-function Evaluate({ onFormSubmit, predictions, isPredictionsPopupOpen, closePredictions }) {
+function Evaluate({ onFormSubmit, predictions, isPredictionsPopupOpen, closePredictions, isLoading }) {
     return (
         <div className='evaluate'>
             <Form
-                onFormSubmit={onFormSubmit} />
+                onFormSubmit={onFormSubmit}
+                isLoading={isLoading} />
             <Predictions
                 predictions={predictions}
                 isOpen={isPredictionsPopupOpen}

@@ -34,7 +34,6 @@ app.post('/predict', (req, res) => {
     pyScript.stdout.on('data', data => {
         const predictions = JSON.parse(data);
         console.log(predictions);
-        // res.json({ result: predictions.combined });
         res.json(predictions);
     });
 
