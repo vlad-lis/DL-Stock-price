@@ -16,7 +16,8 @@ app.post('/predict', (req, res) => {
     console.log(data);
 
     const args = [
-        './backend/predict.py',
+        // './backend/predict.py',
+        `${__dirname}/predict.py`,
         data.age,
         data.sex,
         data.attacked,
