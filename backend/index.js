@@ -5,11 +5,11 @@ const app = express();
 const { spawn } = require('child_process');
 
 app.use(express.json());
-app.use(express.static(path.resolve(__dirname, '../client/build')));
+// app.use(express.static(path.resolve(__dirname, '../client/build')));
 
-app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
-});
+// app.get('*', (req, res) => {
+//     res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
+// });
 
 app.post('/predict', (req, res) => {
     const data = req.body;
