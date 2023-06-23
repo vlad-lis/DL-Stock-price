@@ -1,10 +1,10 @@
 .header__nav-link {
     text-decoration: none;
-    color: #A9A9A9;
+    color: #626161;
     transition: all .3s;
 }
 
 .header__nav-link:hover {
-    opacity: .6;
+    opacity: .7;
     transition: all .3s;
 }

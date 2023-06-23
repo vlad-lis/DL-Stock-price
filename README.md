@@ -20,7 +20,16 @@ No additional configuration should be required when using a conda environment an
 To run the front-end/back-end, please follow the instructions below.
 
 ## Run front-end and back-end locally
-At this time, front-end CSS is not adaptive and is designed for screens with a width of 1024px or more.
+At this time, front-end CSS is not adaptive and is designed for screens with a width of 1024px or more.  
+
+__Note:__ Since some dependencies used are not of the latest version (for example scikit-learn), it is recommended to first set up virtual environment __before__ installing dependencies from __step two__ below. 
+
+To set up a virtual environment, open the terminal/bash, go to the root directory of the cloned repository, and follow these steps:
+* mac: `$ python3 -m venv venv` / windows: `$ python -m venv venv`
+* mac: `$ source venv/bin/activate` / windows: `$ source venv/Scripts/activate`
+* upgrade pip by `$ python -m pip install --upgrade pip`
+<br>
+<br>
 
 1. Clone the repository.
 2. While in the root directory, install dependencies via the terminal:

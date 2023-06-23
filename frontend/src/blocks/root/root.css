@@ -9,7 +9,7 @@
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    background-color: #282c34;
-    color: #FFFFFF;
+    background-color: rgb(214, 214, 214);
+    color: black;
     width: 100%;
 }
