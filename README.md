@@ -22,7 +22,7 @@ To run the front-end/back-end, please follow the instructions below.
 ## Run front-end and back-end locally
 At this time, front-end CSS is not adaptive and is designed for screens with a width of 1024px or more.  
 
-__Note:__ Since some dependencies used are not of the latest version (for example scikit-learn), it is recommended to first set up virtual environment __before__ installing dependencies from __step two__ below. 
+__Note:__ Since some dependencies used, such as scikit-learn, may not be the latest version, it is recommended to set up a virtual environment __before__ installing dependencies from __step two__ below. 
 
 To set up a virtual environment, open the terminal/bash, go to the root directory of the cloned repository, and follow these steps:
 * mac: `$ python3 -m venv venv` / windows: `$ python -m venv venv`
