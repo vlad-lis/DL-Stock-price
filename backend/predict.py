@@ -1,133 +1,134 @@
-import sys
-import pandas as pd
-import joblib
 import json
+import sys
 
-model_combined = joblib.load('./ML/models/saved_models/model_combined.joblib')
-model_inside = joblib.load('./ML/models/saved_models/model_inside.joblib')
-model_outside = joblib.load('./ML/models/saved_models/model_outside.joblib')
-model_cyber = joblib.load('./ML/models/saved_models/model_cyber.joblib')
+import joblib
+import pandas as pd
 
-#data = json.loads(sys.argv[1])
+model_combined = joblib.load('../ML/models/saved_models/model_combined.joblib')
+model_inside = joblib.load('../ML/models/saved_models/model_inside.joblib')
+model_outside = joblib.load('../ML/models/saved_models/model_outside.joblib')
+model_cyber = joblib.load('../ML/models/saved_models/model_cyber.joblib')
 
 
+# age input processing
 def get_age(age):
     if age == '11 years old or younger':
         return 11
-    elif age == '12 years old':
+    if age == '12 years old':
         return 12
-    elif age == '13 years old':
+    if age == '13 years old':
         return 13
-    elif age == '14 years old':
+    if age == '14 years old':
         return 14
-    elif age == '15 years old':
+    if age == '15 years old':
         return 15
-    elif age == '16 years old':
+    if age == '16 years old':
         return 16
-    elif age == '17 years old':
+    if age == '17 years old':
         return 17
-    elif age == '18 years old or older':
+    if age == '18 years old or older':
         return 18
-    else:
-        print('something went wrong')
+    return print('something went wrong')
 
 
+# sex input processing
 def get_sex(sex):
     if sex == 'Male':
         return 0
-    elif sex == 'Female':
+    if sex == 'Female':
         return 1
+    return print('something went wrong')
 
 
+# number of times attacked input processing
 def get_attacked_fighting(attacked):
     if attacked == '0 times':
         return 0
-    elif attacked == '1 time':
+    if attacked == '1 time':
         return 1
-    elif attacked == '2 or 3 times':
+    if attacked == '2 or 3 times':
         return 2
-    elif attacked == '4 or 5 times':
+    if attacked == '4 or 5 times':
         return 3
-    elif attacked == '6 or 7 times':
+    if attacked == '6 or 7 times':
         return 4
-    elif attacked == '8 or 9 times':
+    if attacked == '8 or 9 times':
         return 5
-    elif attacked == '10 or 11 times':
+    if attacked == '10 or 11 times':
         return 6
-    elif attacked == '12 or more times':
+    if attacked == '12 or more times':
         return 7
-    else:
-        print('something went wrong')
+    return print('something went wrong')
 
 
+# frequency of feeling lonely input processing
 def get_lonely(lonely):
     if lonely == 'Never':
         return 0
-    elif lonely == 'Rarely':
+    if lonely == 'Rarely':
         return 1
-    elif lonely == 'Sometimes':
+    if lonely == 'Sometimes':
         return 2
-    elif lonely == 'Most of the time':
+    if lonely == 'Most of the time':
         return 3
-    elif lonely == 'Always':
+    if lonely == 'Always':
         return 4
-    else:
-        print('something went wrong')
+    return print('something went wrong')
 
 
+# number of friends input processing
 def get_friends(friends):
     if friends == '0':
         return 0
-    elif friends == '1':
+    if friends == '1':
         return 1
-    elif friends == '2':
+    if friends == '2':
         return 2
-    elif friends == '3 or more':
+    if friends == '3 or more':
         return 3
-    else:
-        print('something went wrong')
+    return print('something went wrong')
 
 
+# absence from classes input processing
 def get_absence(absence):
     if absence == '0 days':
         return 0
-    elif absence == '1 or 2 days':
+    if absence == '1 or 2 days':
         return 1
-    elif absence == '3 to 5 days':
+    if absence == '3 to 5 days':
         return 2
-    elif absence == '6 to 9 days':
+    if absence == '6 to 9 days':
         return 3
-    elif absence == '10 or more days':
+    if absence == '10 or more days':
         return 4
-    else:
-        print('something went wrong')
+    return print('something went wrong')
 
 
+# compassion input processing
 def get_compassion(compassion):
     if compassion == 'Never':
         return 0
-    elif compassion == 'Rarely':
+    if compassion == 'Rarely':
         return 1
-    elif compassion == 'Sometimes':
+    if compassion == 'Sometimes':
         return 2
-    elif compassion == 'Most of the time':
+    if compassion == 'Most of the time':
         return 3
-    elif compassion == 'Always':
+    if compassion == 'Always':
         return 4
-    else:
-        print('something went wrong')
+    return print('something went wrong')
 
 
+# processing for binary inputs
 def get_binary_value(value):
     if value == 'Yes':
         return 1
-    elif value == 'No':
+    if value == 'No':
         return 0
-    else:
-        print('something went wrong')
+    return print('something went wrong')
 
 
-# new args
+# inputs
 age = get_age(sys.argv[1])
 sex = get_sex(sys.argv[2])
 attacked = get_attacked_fighting(sys.argv[3])
@@ -141,23 +142,10 @@ underweight = get_binary_value(sys.argv[10])
 overweight = get_binary_value(sys.argv[11])
 obese = get_binary_value(sys.argv[12])
 
-#age = int(sys.argv[1])
-#sex = int(sys.argv[2])
-#attacked = int(sys.argv[3])
-#fighting = int(sys.argv[4])
-#lonely = int(sys.argv[5])
-#friends = int(sys.argv[6])
-#absence = int(sys.argv[7])
-#student_compassion = int(sys.argv[8])
-#parent_compassion = int(sys.argv[9])
-#underweight = int(sys.argv[10])
-#overweight = int(sys.argv[11])
-#obese = int(sys.argv[12])
-
 
 def predict():
     # template to insert into model
-    input_template = pd.read_csv('./ML/data/input_template.csv')
+    input_template = pd.read_csv('../ML/data/input_template.csv')
 
     # insert into template
     input_template.at[0, 'age'] = age
@@ -191,9 +179,7 @@ def predict():
               'outside': outside,
               'cyber': cyber}
 
-    output = json.dumps(output)
-
-    return output
+    return json.dumps(output)
 
 
 if __name__ == '__main__':
