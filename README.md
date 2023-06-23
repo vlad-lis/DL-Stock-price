@@ -20,15 +20,17 @@ No additional configuration should be required when using a conda environment an
 To run the front-end/back-end, please follow the instructions below.
 
 ## Run front-end and back-end locally
+At this time, front-end CSS is not adaptive and is designed for screens with a width of 1024px or more.
+
 1. Clone the repository.
 2. While in the root directory, install dependencies via the terminal:
-    - `$ npm i` for JS dependencies
+    - `$ npm i` for back-end dependencies
     - `$ pip install -r requirements.txt` for python script (/backend/predict.py) dependencies
-`
-3. While in /backend directory, launch the local server via the terminal by `$ node index.js`  
-   The server will run locally at http://localhost:3001/
-4. In another terminal window, while in /frontend directory, launch the client by `$ npm run start`  
+    - switch to /frontend directory and run `$ npm i` to install front-end dependencies
+3. While in /frontend directory, launch the client by `$ npm run start`  
    The application will run on http://localhost:3000/ (should open automatically)
+4. In another terminal window, while in /backend directory, launch the local server via the terminal by `$ node index.js`  
+   The server will run locally at http://localhost:3001/
 
 
 ## Dataset
