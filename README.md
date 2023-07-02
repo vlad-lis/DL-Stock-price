@@ -47,9 +47,9 @@ To set up a virtual environment, open the terminal/bash, go to the root director
 <br>
 
 1. Clone the repository.
-2. While in the root directory, install dependencies via the terminal:
-    - `$ npm i` for back-end dependencies
-    - `$ pip install -r requirements.txt` for python script (/backend/predict.py) dependencies
+2. Install dependencies:
+    - while in the root directory, run `$ pip install -r requirements.txt` for python script (/backend/predict.py) dependencies
+    - switch to /backend directory and run `$ npm i` for back-end dependencies
     - switch to /frontend directory and run `$ npm i` to install front-end dependencies
 3. While in /frontend directory, launch the client by `$ npm run start`  
    The application will run on http://localhost:3000/ (should open automatically)
