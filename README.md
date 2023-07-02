@@ -13,11 +13,21 @@ All files pertaining to the initial data set, data cleaning, and model creation 
 * ML/models: notebooks with the model creation process (four models for different target variables);
 * ML/models/saved_models: corresponding saved models for further usage in the back-end and final notebook;   
 
+To run locally see [instructions](#run-front-end-and-back-end-locally) below.
+
 To view the final notebook, which takes input and outputs predictions using saved models, open `input_predict_notebook.ipynb` from the ML folder with Jupyter Notebook or an IDE that supports a Jupyter Python kernel.
   
 No additional configuration should be required when using a conda environment and a conda Python kernel.  
 
-To run the front-end/back-end, please follow the instructions below.
+* When running the project locally, you can view the home and about pages for information about the project:
+<img src="./readme_images/about.png" alt="home screenshot">
+
+* To test the model, switch to the evaluate tab, fill in the form, and click 'evaluate':
+<img src="./readme_images/form.png" alt="home screenshot">
+
+* After processing the inputs from the form using the Python script (model), a popup with the results will open:
+<img src="./readme_images/results.png" alt="home screenshot">
+
 
 ## Run front-end and back-end locally
 At this time, front-end CSS is not adaptive and is designed for screens with a width of 1024px or more.  
@@ -38,7 +48,7 @@ To set up a virtual environment, open the terminal/bash, go to the root director
     - switch to /frontend directory and run `$ npm i` to install front-end dependencies
 3. While in /frontend directory, launch the client by `$ npm run start`  
    The application will run on http://localhost:3000/ (should open automatically)
-4. In another terminal window, while in /backend directory, launch the local server via the terminal by `$ node index.js`  
+4. In another terminal window, while in /backend directory, launch the local server via the terminal by `$ npm run start`  
    The server will run locally at http://localhost:3001/
 
 
