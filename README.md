@@ -6,18 +6,20 @@ _This model is created solely for demonstration purposes and does not claim to p
 
 The repository contains both notebooks and a simple front-end/back-end for demonstration.
 
+* To run locally see [instructions](#run-front-end-and-back-end-locally) below.
+
+* To view the final notebook, which takes input and outputs predictions using saved models, open `input_predict_notebook.ipynb` from the ML folder with Jupyter Notebook or an IDE that supports a Jupyter Python kernel.
+  
+No additional configuration should be required when using a conda environment and a conda Python kernel.  
+
 All files pertaining to the initial data set, data cleaning, and model creation can be found in the /ML folder of the repository:
 
 * ML/data folder: initial data set, data sets created during data cleaning, input template;
 * ML/data_cleaning folder: notebooks with the data cleaning process (divided into two steps);
 * ML/models: notebooks with the model creation process (four models for different target variables);
-* ML/models/saved_models: corresponding saved models for further usage in the back-end and final notebook;   
+* ML/models/saved_models: corresponding saved models for further usage in the back-end and final notebook;  
 
-To run locally see [instructions](#run-front-end-and-back-end-locally) below.
-
-To view the final notebook, which takes input and outputs predictions using saved models, open `input_predict_notebook.ipynb` from the ML folder with Jupyter Notebook or an IDE that supports a Jupyter Python kernel.
-  
-No additional configuration should be required when using a conda environment and a conda Python kernel.  
+## Preview
 
 * When running the project locally, you can view the home and about pages for information about the project:
 <img src="./readme_images/about.png" alt="home screenshot">
@@ -27,6 +29,9 @@ No additional configuration should be required when using a conda environment an
 
 * After processing the inputs from the form using the Python script (model), a popup with the results will open:
 <img src="./readme_images/results.png" alt="home screenshot">
+
+* When viewing the project in `input_predict_notebook.ipynb`, restart the kernel and run all cells. The function in the last cell will prompt for input and output the results:
+<img src="./readme_images/notebook.png" alt="home screenshot">
 
 
 ## Run front-end and back-end locally
